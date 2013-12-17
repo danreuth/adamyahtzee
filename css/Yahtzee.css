@@ -1,0 +1,144 @@
+/**
+Some resets to help standardize some of the elements of the page.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  color: #333;
+}
+
+ul,ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+
+/**
+Styles for all first level elements of the page.
+*/
+section {
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 10px;
+}
+
+/**
+Horizontal Rule
+*/
+hr {
+  border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+  border-top: 1px solid rgba(230, 230, 230, 0.5);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/**
+Button Styles
+*/
+button, input[type=submit], .button {
+  border: 1px solid #ccc;
+  background-color: #bbb;
+  border-radius: 5px;
+  padding: 5px;
+  min-width: 150px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+button:hover,input[type=submit]:hover, .button:hover {
+  background-color: #888;
+}
+
+/* Score Card */
+
+#score-card .col {
+  width: 400px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#score-card .value {
+  text-align: center;
+  display:inline-block;
+  width: 100px;
+}
+
+#score-card .row > * {
+  vertical-align: middle;
+}
+
+#score-card .row .label {
+  width: 200px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+/* Dice */
+.inputs > *{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.dice {
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+}
+
+.dice input {
+  display: none;
+}
+
+.dice input + div {
+  background-image: url(../img/ColorDice.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+
+.dice input:checked + div {
+  opacity: .5;
+}
+
+.dice input[value="0"] + div {
+  background-image: none;
+  background-color: #000;
+}
+
+.dice input[value="1"] + div {
+  background-position: 0px 0px;
+}
+
+.dice input[value="2"] + div {
+  background-position: 0px -64px;
+}
+
+.dice input[value="3"] + div {
+  background-position: 0px -128px;
+}
+
+.dice input[value="4"] + div {
+  background-position: 0px -192px;
+}
+
+.dice input[value="5"] + div {
+  background-position: 0px -256px;
+}
+
+.dice input[value="6"] + div {
+  background-position: 0px -320px;
+}

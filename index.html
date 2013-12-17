@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Yahtzee</title>
+		
+		<!-- style tags for css
+			<link href="path/to/file" rel="stylesheet" />
+			-->
+		<link href="css/Yahtzee.css" rel="stylesheet" />
+		
+		<!-- script tags
+			<script src="path/to/file"></script>
+			-->
+
+		<script src="lib/jquery-1.10.2/jquery.js"></script>
+		<script src="src/catalyst/yahtzee/Dice.js"></script>
+		<script src="src/catalyst/yahtzee/Hand.js"></script>
+		<script src="src/catalyst/yahtzee/Rules.js"></script>
+		<script src="src/catalyst/yahtzee/ScoreCard.js"></script>
+		<script src="src/catalyst/yahtzee/View.js"></script>
+		<script src="src/catalyst/yahtzee/Yahtzee.js"></script>
+
+		<script>
+			catalyst.yahtzee.Yahtzee(jQuery);
+		</script>
+		
+	</head>
+	<body>
+		<section id="game">
+			<h1>Controls</h1>
+			<div class="message"></div>
+			<button id="new-game">New Game</button>
+		</section>
+		<section>
+			<form class="roll" action="javascript://">
+				<h1>Dice</h1>
+				<div class="inputs">
+					<input type="submit" value="Roll" />
+					<label class="dice"><input type="checkbox" name="dice" value="0" /><div></div></label>
+					<label class="dice"><input type="checkbox" name="dice" value="0" /><div></div></label>
+					<label class="dice"><input type="checkbox" name="dice" value="0" /><div></div></label>
+					<label class="dice"><input type="checkbox" name="dice" value="0" /><div></div></label>
+					<label class="dice"><input type="checkbox" name="dice" value="0" /><div></div></label>
+				</div>
+				<div class="message"></div>
+			</form>
+		</section>
+		<section id="score-card">
+			<h1>Score Card</h1>
+			<div class="message"></div>
+			<div class="col">
+				<div class="row">
+					<h2>Upper Section</h2>
+				</div>
+				<div class="row">
+					<button id="aces" class="label" title="Count and add only Aces">Aces</button><span class="value"></span>
+				</div>
+				<div class="row">
+					<button id="twos" class="label" title="Count and add only Twos">Twos</button><span class="value"></span>
+				</div>
+				<div class="row">
+					<button id="threes" class="label" title="Count and add only Threes">Three</button><span class="value"></span>
+				</div>
+				<div class="row">
+					<button id="fours" class="label" title="Count and add only Fours">Fours</button><span class="value"></span>
+				</div>
+				<div class="row">
+					<button id="fives" class="label" title="Count and add only Fives">Fives</button><span class="value"></span>
+				</div>
+				<div class="row">
+					<button id="sixes" class="label" title="Count and add only Sixes">Sixes</button><span class="value"></span>
+				</div>
+				<div class="row">
+					<span class="label">Upper Section Sub-Total</span><span id="upper-sub-total" class="value"></span>
+				</div>
+				<div class="row">
+					<span class="label" title="Bonus if over 63">Upper Section Bonus</span><span id="upper-bonus" class="value"></span>
+				</div>
+				<div class="row">
+					<span class="label">Upper Section Total</span><span id="upper-total" class="value"></span>
+				</div>
+			</div>
+			<div class="col">
+				<div class="row">
+					<h2>Lower Section</h2>
+				</div>
+				<div class="row">
+					<button id="three-of-a-kind" class="label" title="Add total of all Dice">3 of a kind</button><span class="value"></span>
+				</div>
+				<div class="row">
+					<button id="four-of-a-kind" class="label" title="Add total of all Dice">4 of a kind</button><span class="value"></span>
+				</div>
+				<div class="row">
+					<button id="full-house" class="label" title="Score 25">Full House</button><span class="value"></span>
+				</div>
+				<div class="row">
+					<button id="small-strait" class="label" title="Score 30">Small Strait</button><span class="value"></span>
+				</div>
+				<div class="row">
+					<button id="large-strait" class="label" title="Score 40">Large Strait</button><span class="value"></span>
+				</div>
+				<div class="row">
+					<button id="yahtzee" class="label" title="Score 50">Yahtzee</button><span class="value"></span>
+				</div>
+				<div class="row">
+					<button id="chance" class="label" title="Score Total of all Dice">Chance</button><span class="value"></span>
+				</div>
+				<div class="row">
+					<span class="label">Yahtzee Bonus</span><span id="yahtzee-bonus" class="value"></span>
+				</div>
+			</div>
+			<div class="row">
+				<h2>Totals</h2>
+			</div>
+			<div class="row">
+				<span class="label">Upper Section Total</span><span id="upper-final-total" class="value"></span>
+			</div>
+			<div class="row">
+				<span class="label">Lower Section Total</span><span id="lower-total" class="value"></span>
+			</div>
+			<div class="row">
+				<span class="label">Grand Total</span><span id="grand-total" class="value"></span>
+			</div>
+		</section>
+	</body>
+</html>
